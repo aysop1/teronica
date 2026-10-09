@@ -3,15 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Cloud Website</title>
+    <meta name="theme-color" content="#f7f7f1">
+    <meta name="description" content="Find your next pickleball court, meet your people, and get out there with Teronica.">
+    <title>Teronica — Find your next court</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Hello World! 🚀</h1>
-        <p>I am coding this website from scratch in the cloud.</p>
-        <button id="btn">Click For Magic</button>
-    </div>
-    <script src="script.js"></script>
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="Teronica home">
+            <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 36 36" fill="none">
+                    <rect x="3" y="3" width="30" height="30" rx="10" fill="currentColor"/>
+                    <path d="M18 4v28M4 14h28M4 22h28" stroke="#F7F7F1" stroke-width="1.5"/>
+                    <circle cx="24.5" cy="10" r="2.5" fill="#D5F36A"/>
+                </svg>
+            </span>
+            <span>teronica</span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+            <a href="#discover">Discover</a>
+            <a href="#why-teronica">Why Teronica</a>
+            <a href="#community">The community</a>
+        </nav>
+        <a class="header-cta" href="#discover">Find a court <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+        <section class="hero page-wrap" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="eyebrow-dot"></span> A better day starts on court</p>
+                <h1>Find your court.<br>Find your <span>people.</span></h1>
+                <p class="hero-intro">Your next great game is closer than you think. Discover places to play, pick up a paddle, and get in on the fun.</p>
+                <form class="search-form" id="court-search">
+                    <label class="sr-only" for="location">City or neighborhood</label>
+                    <span class="search-pin" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.2" stroke="currentColor" stroke-width="1.7"/></svg>
+                    </span>
+                    <input id="location" name="location" type="text" placeholder="Enter a city or neighborhood" autocomplete="address-level2" required>
+                    <button type="submit">Find courts <span aria-hidden="true">→</span></button>
+                </form>
+                <p class="search-message" id="search-message" aria-live="polite"></p>
+                <div class="hero-proof">
+                    <div class="avatar-stack" aria-hidden="true">
+                        <span class="avatar avatar-one">J</span>
+                        <span class="avatar avatar-two">M</span>
+                        <span class="avatar avatar-three">A</span>
+                        <span class="avatar avatar-four">+</span>
+                    </div>
+                    <p><strong>Good games, great company.</strong><br>There's a place for you here.</p>
+                </div>
+            </div>
+
+            <div class="hero-art" aria-label="Illustration of a pickleball court and paddle">
+                <div class="art-orbit orbit-one"></div>
+                <div class="art-orbit orbit-two"></div>
+                <div class="art-spark spark-one">✳</div>
+                <div class="art-spark spark-two">✳</div>
+                <div class="court-illustration">
+                    <div class="court-outline">
+                        <div class="court-net"></div>
+                        <div class="court-kitchen court-kitchen-top"></div>
+                        <div class="court-kitchen court-kitchen-bottom"></div>
+                        <div class="court-center court-center-top"></div>
+                        <div class="court-center court-center-bottom"></div>
+                    </div>
+                    <div class="paddle">
+                        <div class="paddle-face"><span></span><span></span><span></span><span></span></div>
+                        <div class="paddle-handle"></div>
+                    </div>
+                    <div class="pickleball"><span></span><span></span><span></span><span></span></div>
+                </div>
+                <div class="art-note">
+                    <span class="note-icon" aria-hidden="true">↗</span>
+                    <span><strong>Your next game</strong><small>is out there</small></span>
+                </div>
+                <div class="art-caption"><span></span> YOUR NEIGHBORHOOD, IN PLAY</div>
+            </div>
+        </section>
+
+        <section class="benefit-strip" aria-label="What you can do with Teronica">
+            <div class="benefit-inner">
+                <p><span class="benefit-icon">⌖</span> Courts around the corner</p>
+                <span class="benefit-divider" aria-hidden="true"></span>
+                <p><span class="benefit-icon">↗</span> Games for every level</p>
+                <span class="benefit-divider" aria-hidden="true"></span>
+                <p><span class="benefit-icon">♡</span> A community that gets it</p>
+            </div>
+        </section>
+
+        <section class="discover-section page-wrap" id="discover">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">THE GOOD STUFF STARTS HERE</p>
+                    <h2>However you play,<br><span>there's a place for you.</span></h2>
+                </div>
+                <a class="text-link" href="#why-teronica">Get to know Teronica <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="play-cards">
+                <article class="play-card card-outdoor">
+                    <div class="card-art outdoor-art" aria-hidden="true">
+                        <div class="mini-court"><span></span><span></span><span></span></div>
+                        <div class="sun-disc"></div>
+                        <span class="art-label">FRESH AIR, PLEASE</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-number">01 / GET OUTSIDE</span>
+                        <h3>Courts in the open</h3>
+                        <p>Find a neighborhood court and make the most of a sunny day.</p>
+                        <a href="#court-search" class="card-link" data-focus-search>Explore outdoor play <span aria-hidden="true">→</span></a>
+                    </div>
+                </article>
+                <article class="play-card card-indoor">
+                    <div class="card-art indoor-art" aria-hidden="true">
+                        <div class="indoor-court"><span></span><span></span><span></span></div>
+                        <div class="indoor-ball"></div>
+                        <span class="art-label">RAIN-CHECK? NEVER.</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-number">02 / PLAY ANYTIME</span>
+                        <h3>Courts for all weather</h3>
+                        <p>Keep your game going with indoor spots and all-season play.</p>
+                        <a href="#court-search" class="card-link" data-focus-search>Explore indoor play <span aria-hidden="true">→</span></a>
+                    </div>
+                </article>
+                <article class="play-card card-community">
+                    <div class="card-art community-art" aria-hidden="true">
+                        <div class="community-sun"></div>
+                        <div class="community-court"><span></span><span></span></div>
+                        <div class="community-ball"></div>
+                        <span class="art-label">BETTER TOGETHER</span>
+                    </div>
+                    <div class="card-content">
+                        <span class="card-number">03 / MEET YOUR PEOPLE</span>
+                        <h3>More than a match</h3>
+                        <p>Show up for the game. Stick around for the people you meet.</p>
+                        <a href="#community" class="card-link">Meet the community <span aria-hidden="true">→</span></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="community-section" id="why-teronica">
+            <div class="community-inner page-wrap" id="community">
+                <div class="community-mark" aria-hidden="true">
+                    <svg viewBox="0 0 180 180" fill="none">
+                        <circle cx="90" cy="90" r="83" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M90 8v164M8 90h164M32 32l116 116M148 32 32 148" stroke="currentColor" stroke-width="1.5"/>
+                        <circle cx="90" cy="90" r="15" fill="#D5F36A" stroke="currentColor" stroke-width="1.5"/>
+                    </svg>
+                    <span>GOOD<br>RALLY</span>
+                </div>
+                <div class="community-copy">
+                    <p class="eyebrow">THIS IS YOUR INVITATION</p>
+                    <h2>New to the game?<br><span>You're already in.</span></h2>
+                    <p>Pickleball is better when everybody gets to play. Find a court, bring a friend, or come on your own. Your kind of game is waiting.</p>
+                    <a class="light-button" href="#discover">Come find your game <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="community-aside">
+                    <span class="aside-spark" aria-hidden="true">✳</span>
+                    <p>Easy to start.<br>Hard to stop.</p>
+                    <span class="aside-caption">THAT'S THE TERONICA EFFECT</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="brand footer-brand" href="#home">
+            <span class="brand-mark" aria-hidden="true">
+                <svg viewBox="0 0 36 36" fill="none">
+                    <rect x="3" y="3" width="30" height="30" rx="10" fill="currentColor"/>
+                    <path d="M18 4v28M4 14h28M4 22h28" stroke="#F7F7F1" stroke-width="1.5"/>
+                    <circle cx="24.5" cy="10" r="2.5" fill="#D5F36A"/>
+                </svg>
+            </span>
+            <span>teronica</span>
+        </a>
+        <p>Find your court. Find your people.</p>
+        <span class="footer-copyright">MADE FOR THE LOVE OF THE GAME <span aria-hidden="true">✳</span></span>
+    </footer>
 </body>
 </html>
